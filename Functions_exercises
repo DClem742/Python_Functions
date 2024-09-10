@@ -1,0 +1,102 @@
+##MADLIB FUNCTION##
+
+def madlib(name, subject):
+    the_madlib= "Your name is %s and your favorite subject is %s" % (
+        name, subject)
+    return the_madlib
+
+my_madlib = madlib("DC", "History")
+print(my_madlib)
+
+# Celsius to Fahrenheit
+user_input = int(input("Enter a temperature in Celsius "))
+
+def convert_temperature_f(celcius):
+    return (celcius * 9/5) + 32
+
+fahrenheit = convert_temperature_f(user_input)
+print(fahrenheit)
+
+# Fahrenheit to Celsisu
+
+user_input_2 = int(input("Enter a temperature in Fahrenheit "))
+
+def convert_temp_c(fahrenheit):
+    return (fahrenheit - 32) * 5/9
+
+celsius = convert_temp_c(user_input_2)
+print(celsius)
+
+# is_even function
+
+def is_even(number):
+    if (number % 2) == 0:
+        return True
+    else:
+        return False
+print(is_even(8))
+print(is_even(25))
+
+# is_odd function
+def is_odd(number):
+    if (number % 2) != 0:
+        return True
+    else:
+        return False
+print(is_odd(11))
+print(is_odd(42))
+
+# only_even function
+
+def only_evens(numbers):
+    i = 0
+    even_numbers = []
+    while i < len(numbers):
+        if (numbers[i] % 2) == 0:
+            even_numbers.append(numbers[i])
+        i = i + 1
+    return even_numbers
+
+print(only_evens([11, 20, 42, 97, 23, 10])) 
+# only_odd function
+
+def only_odds_while(numbers):
+    i = 0
+    odd_numbers = []
+    while i < len(numbers):
+        if (numbers[i] % 2) != 0:
+            odd_numbers.append(numbers[i])
+        i = i + 1
+    return odd_numbers
+
+print(only_odds_while([11, 20, 42, 97, 23, 10]))
+
+##Smallest Vs Largest
+
+def shortest(list_of_strings):
+    shortest= list_of_strings[0]
+    i = 0
+    while i < len(list_of_strings):
+        if (len(list_of_strings[i])) <= len(shortest):
+            shortest = list_of_strings[i]
+        i += 1
+    return shortest
+
+def longest(list_of_strings):
+    longest= list_of_strings[0]
+    i = 0
+    while i < len(list_of_strings):
+        if (len(list_of_strings[i])) >= len(longest):
+            longest = list_of_strings[i]
+            
+        i += 1
+    return longest
+
+random_strings = ["white", "blue", "black", "red", "green"] # three strings tie for longest, why does it print the last one?
+
+print(shortest(random_strings))
+print(longest(random_strings))
+            
+
+
+
